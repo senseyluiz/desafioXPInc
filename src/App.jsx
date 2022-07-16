@@ -11,9 +11,8 @@ import MyContext from './components/MyContext';
 
 function App() {
   const [dadosLogin, setDadosLogin] = useState({email:"", password:""})
-
-
-
+  const [acoes, setAcoes] = useState()
+  const [saldo, setSaldo] = useState()
 
   const contextValue = {
     dadosLogin, setDadosLogin

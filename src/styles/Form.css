@@ -6,17 +6,21 @@
 .Form input {
   border: none;
   border-radius: 5px;
+  color: #fff;
   width: 230px;
   height: 40px;
   padding-left: 10px;
-  background-color: rgb(248, 240, 197); 
+  background-color: var(--background-button-primary); 
   font-size: 24px; 
   margin-bottom: 15px;
 }
 
 .Form button {
+  color: #fff;
   width: 230px;
   height: 40px;
   font-size: 24px;
+  font-weight: 700;
   border-radius: 5px;
+  background-color: var(--background-button-secundary); 
 }

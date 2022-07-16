@@ -1,5 +1,10 @@
 :root {
+  --background-acoes: #FCA311;
+  --background-qtde: #3A5A40;
+  --background-valor: #000;
   --background-primary: #58815780;
+  --background-button-compra: #0DCB13;
   --background-button-primary: #14213D;
   --background-button-secundary: #FCA311;
+  --background-button-venda: #F39A08;  
 }
