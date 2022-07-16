@@ -1,0 +1,27 @@
+.Header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+  min-width: 360px;
+  margin-bottom: 20px;  
+}
+
+.Header img {
+  width: 128px;  
+}
+
+.Header div {
+  width: 163px;
+  height: 33px;
+  background-color: var(--background-button-primary);
+  font-size: 12px;  
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 5px;
+  line-height: 33px;
+}
+
+.Header span {
+  font-weight: bold;
+}

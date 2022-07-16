@@ -1,8 +1,15 @@
+import "../styles/ListAcoes.css"
+import AcoesDisponiveis from "../components/AcoesDisponiveis";
+import Header from "../components/Header";
+import MinhasAcoes from "../components/MinhasAcoes";
 
-function ListaAcoes () {
+function ListaAcoes () {  
+
   return(
-    <main>
-      <h1>Lista de Ações</h1>
+    <main className="ListAcoes">
+      <Header />
+      <MinhasAcoes />
+      <AcoesDisponiveis />
     </main>
   )
 }

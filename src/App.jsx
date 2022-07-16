@@ -10,12 +10,15 @@ import { useState } from 'react';
 import MyContext from './components/MyContext';
 
 function App() {
-  const [dadosLogin, setDadosLogin] = useState({email:"", password:""})
-  const [acoes, setAcoes] = useState()
-  const [saldo, setSaldo] = useState()
+  const [dadosLogin, setDadosLogin] = useState({email:"", password:""}) 
+  const [userConected, setUserConected] = useState({name:"", email: ""})
+  
 
   const contextValue = {
-    dadosLogin, setDadosLogin
+    dadosLogin,
+    setDadosLogin,
+    userConected,
+    setUserConected,
   }
   return (
     <MyContext.Provider value={contextValue}>

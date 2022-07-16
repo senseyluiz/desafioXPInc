@@ -3,9 +3,10 @@ import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import validateLogin from "../utils/validateLogin";
 import MyContext from "./MyContext";
+import Users from '../data/Users';
 
 function Form () {  
-  const {dadosLogin, setDadosLogin} = useContext(MyContext)
+  const {dadosLogin, setDadosLogin, setUserConected} = useContext(MyContext)
   const history = useHistory()
   
 
@@ -24,6 +25,16 @@ function Form () {
     const isValidLogin = validateLogin(email, password)
 
     if(isValidLogin){
+
+      const conected = Users.find((user) => user.email === dadosLogin.email);
+      
+      setUserConected((previstate) => ({
+        ...previstate,
+        name: conected.name,
+        email: conected.email
+      }))
+      
+      
       history.push("/listaAcoes"); // Redireciona para página lista de Ações
     }    
 
