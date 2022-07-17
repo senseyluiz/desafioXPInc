@@ -37,7 +37,7 @@ function MinhasAcoes () {
                 <td className='acoes'>{ name }</td>
                 <td className='qtde'>{ quantity }</td>
                 <td className='valor'>{ valorAcao(name, quantity) }</td>
-                <td> <button className='ButtonCompra'> <Link to='/compraVenda' > C </Link></button> <button className='ButtonVenda'> <Link to='/compraVenda' > V </Link> </button> </td>
+                <td className='buttons'> <button className='ButtonCompra'> <Link to='/compraVenda' > C </Link></button> <button className='ButtonVenda'> <Link to='/compraVenda' > V </Link> </button> </td>
               </tr>
             ))
           }
