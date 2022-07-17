@@ -33,7 +33,7 @@ function AcoesDisponiveis () {
         </tbody>
       </table>
 
-      <Link to="/meuSaldo"> <button className='Acoes'> Depósito / Retirada </button> </Link>
+      <Link to="/meuSaldo"> <button type='submit' className='Acoes'> Depósito / Retirada </button> </Link>
     </section>
   )
 }

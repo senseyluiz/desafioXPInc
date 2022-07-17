@@ -1,5 +1,6 @@
 
 import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Users from '../data/Users';
 import MyContext from './MyContext';
 function DepositoRetirada (){
@@ -38,16 +39,22 @@ function DepositoRetirada (){
   
 
   return(
-    <section>
-      <div>
-        <span>Saldo: </span><span> { userConected.saldo}</span>
+    <section className='DepositoRetirada'>
+      <div className='saldo'>
+        <span>Saldo: </span><span> R$ { userConected.saldo}</span>
       </div>
 
-      <input type="number" onChange={handleClange}/>
+      <input type="text" onChange={handleClange} className='inputValor' placeholder='Informe  Valor'/>
 
-      <div><button type="submit" onClick={() => depositar(valorDigitado)}> Depósito </button><button type="submit" onClick={() => retirar(valorDigitado)}> Retirada </button></div>
+      <div className='buttons'>
+        <button type="submit" onClick={() => depositar(valorDigitado)} className="btnDepositar"> Depósito </button>
+        <button type="submit" onClick={() => retirar(valorDigitado)} className="btnRetirada"> Retirada </button>
+      </div>
 
-      <div><button type="submit"> VOLTAR </button><button type="submit"> CONFIRMAR </button></div>
+      <div className='buttons'>
+         <button type="submit"className='btnVoltar'> <Link to="/listaAcoes">VOLTAR </Link></button>
+        <button type="submit" className='btnConfirmar'> CONFIRMAR </button>
+      </div>
     </section>
   )
 

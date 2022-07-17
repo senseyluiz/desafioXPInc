@@ -89,13 +89,16 @@ a {
   color: #FFFFFF;
 }
 
+button {
+  cursor: pointer;
+}
+
 button:disabled {
   background-color: #CFC1C1;
   color: #FFFFFF;  
 }
 
-.buttons {
-  
+.buttons {  
   display: flex;
   justify-content: space-around;
 }
