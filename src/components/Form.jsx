@@ -31,7 +31,8 @@ function Form () {
       setUserConected((previstate) => ({
         ...previstate,
         name: conected.name,
-        email: conected.email
+        email: conected.email,
+        saldo: conected.saldo,
       }))
       
       

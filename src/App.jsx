@@ -11,7 +11,7 @@ import MyContext from './components/MyContext';
 
 function App() {
   const [dadosLogin, setDadosLogin] = useState({email:"", password:""}) 
-  const [userConected, setUserConected] = useState({name:"", email: ""})
+  const [userConected, setUserConected] = useState({name:"", email: "", saldo: 0})
   
 
   const contextValue = {

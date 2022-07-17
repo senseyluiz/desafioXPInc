@@ -1,23 +1,8 @@
 
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Acoes from '../data/Acoes';
-import Users from '../data/Users';
-import MyContext from './MyContext';
 
-
-function AcoesDisponiveis () {
-
-  const { userConected} = useContext(MyContext)
-  const {name} = userConected
-  const minhasAcoes = Users.find((user) => user.name === name).acoes
-
-    
-
-  // const valorAcao = (name, qtde) => {
-  //   const acao = Acoes.find((acao) => acao.name === name).valor;
-  //   return (acao * qtde).toFixed(2)
-  // }
+function AcoesDisponiveis () {  
   
   return(
     <section>
@@ -48,7 +33,7 @@ function AcoesDisponiveis () {
         </tbody>
       </table>
 
-      <button className='Acoes'> Depósito / Retirada </button>
+      <Link to="/meuSaldo"> <button className='Acoes'> Depósito / Retirada </button> </Link>
     </section>
   )
 }

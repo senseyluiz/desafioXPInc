@@ -1,8 +1,11 @@
+import DepositoRetirada from "../components/DepositoRetirada";
+import Header from "../components/Header";
 
 function MeuSaldo () {
   return(
     <main>
-      <h1> Meu Saldo </h1>
+      <Header />
+      <DepositoRetirada />
     </main>
   )
 }
