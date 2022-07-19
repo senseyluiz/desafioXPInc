@@ -25,7 +25,9 @@ function AcoesDisponiveis () {
                 <td className='acoes'>{ name }</td>
                 <td className='qtde'>{ quantity }</td>
                 <td className='valor'>{ valor }</td>
-                <td className='buttons'> <button className='ButtonCompra'> <Link to='/compraVenda' > C </Link></button> <button disabled={true} className='ButtonVenda'>  V </button> </td>
+                <td className='buttons'> 
+                  <button className='ButtonCompra'> <Link to='/compraVenda' > C </Link></button> 
+                  <button disabled={true} className='ButtonVenda'>  V </button> </td>
               </tr>
             ))
           }

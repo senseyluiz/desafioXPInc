@@ -1,10 +1,12 @@
+import '../styles/CompraVenda.css'
 import Header from "../components/Header";
+import Operacoes from '../components/Operacoes';
 
 function CompraVenda () {
   return(
-    <main>
-      <h1>Compra e venda</h1>
+    <main className="CompraVenda">      
       <Header />
+      <Operacoes />
     </main>
   )
 }

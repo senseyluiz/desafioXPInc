@@ -1,10 +1,37 @@
 :root {
-  --background-acoes: #FCA311;
   --background-qtde: #3A5A40;
+  --background-acoes: #FCA311;
   --background-valor: #000;
   --background-primary: #58815760;
   --background-button-compra: #0DCB13;
   --background-button-primary: #14213D;
   --background-button-secundary: #FCA311;
   --background-button-venda: #F39A08;  
+}
+
+.screenWidth {
+  align-items: center;
+  
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 360px;
+  padding: 20px;
+  width: 100%;
+}
+
+.btnDadosLogin {
+  color: #FFFFFF;
+  background-color: var(--background-button-primary);
+  border-radius: 5px;
+  font-size: 24px;
+  height: 40px;
+  width: 230px;
+}
+
+.btnAcessar {
+  background-color: var(--background-button-secundary);
 }

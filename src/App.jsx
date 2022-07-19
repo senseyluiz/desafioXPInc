@@ -21,17 +21,19 @@ function App() {
     setUserConected,
   }
   return (
-    <MyContext.Provider value={contextValue}>
-      <BrowserRouter>  
-        <Switch>      
-          <Route path='/login' component={Login} />
-          <Route path='/listaAcoes' component={ListaAcoes} />
-          <Route path='/compraVenda' component={CompraVenda} />
-          <Route path='/meuSaldo' component={MeuSaldo} /> 
-          <Route path='*' component={Error} />
-        </Switch>
-      </BrowserRouter>  
-    </MyContext.Provider>    
+    <main className="App">    
+      <MyContext.Provider value={contextValue}>
+        <BrowserRouter>  
+          <Switch>      
+            <Route path='/login' component={Login} />
+            <Route path='/listaAcoes' component={ListaAcoes} />
+            <Route path='/compraVenda' component={CompraVenda} />
+            <Route path='/meuSaldo' component={MeuSaldo} /> 
+            <Route path='*' component={Error} />
+          </Switch>
+        </BrowserRouter>  
+      </MyContext.Provider>  
+    </main>  
     
   );
 }

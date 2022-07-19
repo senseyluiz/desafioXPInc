@@ -4,7 +4,7 @@ import logo from "../img/xp-investimentos-logo-4.png"
 
 function Login () {  
   return(
-    <main className="Login">
+    <main className="screenWidth Login">
       <img src={logo} alt="logo" />
       <Form />
     </main>
