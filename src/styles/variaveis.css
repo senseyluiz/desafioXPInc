@@ -10,17 +10,17 @@
 }
 
 .screenWidth {
-  align-items: center;
-  
+  align-items: center;  
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 800px;
   min-width: 360px;
-  padding: 20px;
+  padding: 10px 20px;
   width: 100%;
+  background-color: aqua;
 }
 
 .btnDadosLogin {
@@ -34,4 +34,66 @@
 
 .btnAcessar {
   background-color: var(--background-button-secundary);
+}
+
+.title {
+  background-color: var(--background-button-primary);
+  border-radius: 5px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: bold;  
+  line-height: 33px;
+  margin-bottom: 45px;
+  text-align: center;
+  width: 100%;
+}
+
+.nomeAcao {
+  background-color: var(--background-acoes);
+  color: var(--background-button-primary);
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.qtdeAcao {
+  background-color: var(--background-qtde);
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.valorAcao {
+  background-color: var(--background-valor);
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.btnCompraVenda {  
+  border: none;
+  border-radius: 5px; 
+  font-size: 16px;
+  font-weight: bold;
+  height: 23px;
+  width: 35px;
+}
+
+.btnVenda {
+  background-color: var(--background-button-venda);
+}
+
+.btnCompra {
+  background-color: var(--background-button-compra);
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+button:disabled {
+  background-color: #CFC1C1;
+  color: #FFFFFF;  
+}
+
+button {
+  cursor: pointer;
 }

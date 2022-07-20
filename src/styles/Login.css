@@ -3,3 +3,29 @@
   max-width: 340px;
   min-width: 294px;
 }
+
+.Login .Form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Login .Form input {
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  width: 230px;
+  height: 40px;
+  padding-left: 10px;  
+  font-size: 24px; 
+  margin-bottom: 15px;
+}
+
+.Form button {
+  color: #fff;
+  width: 230px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 5px;
+  
+}

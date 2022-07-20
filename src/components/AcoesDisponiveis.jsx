@@ -6,7 +6,7 @@ function AcoesDisponiveis () {
   
   return(
     <section>
-        <div className='Acoes'>Ações Disponíveis</div>
+        <div className='title'>Ações Disponíveis</div>
       <table>
         <thead>
           <tr>
@@ -22,12 +22,12 @@ function AcoesDisponiveis () {
           {
             Acoes.map(({name, valor, quantity}) => (
               <tr key={name}>
-                <td className='acoes'>{ name }</td>
-                <td className='qtde'>{ quantity }</td>
-                <td className='valor'>{ valor }</td>
+                <td className='nomeAcao'>{ name }</td>
+                <td className='qtdeAcao'>{ quantity }</td>
+                <td className='valorAcao'>{ valor }</td>
                 <td className='buttons'> 
-                  <button className='ButtonCompra'> <Link to='/compraVenda' > C </Link></button> 
-                  <button disabled={true} className='ButtonVenda'>  V </button> </td>
+                  <button className='btnCompraVenda btnCompra'> <Link to='/compraVenda' > C </Link></button> 
+                  <button disabled={true} className='btnCompraVenda btnVenda'>  V </button> </td>
               </tr>
             ))
           }

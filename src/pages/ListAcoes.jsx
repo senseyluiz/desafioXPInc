@@ -6,7 +6,7 @@ import MinhasAcoes from "../components/MinhasAcoes";
 function ListaAcoes () {  
 
   return(
-    <main className="ListAcoes">
+    <main className="screenWidth">
       <Header />
       <MinhasAcoes />
       <AcoesDisponiveis />
