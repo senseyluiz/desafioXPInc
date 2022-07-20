@@ -26,7 +26,7 @@ function AcoesDisponiveis () {
                 <td className='qtdeAcao'>{ quantity }</td>
                 <td className='valorAcao'>{ valor }</td>
                 <td className='buttons'> 
-                  <button className='btnCompraVenda btnCompra'> <Link to='/compraVenda' > C </Link></button> 
+                <Link to='/compraVenda' ><button className='btnCompraVenda btnCompra'>  C </button></Link> 
                   <button disabled={true} className='btnCompraVenda btnVenda'>  V </button> </td>
               </tr>
             ))

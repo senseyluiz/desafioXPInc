@@ -38,8 +38,8 @@ function MinhasAcoes () {
                 <td className='qtdeAcao'>{ quantity }</td>
                 <td className='valorAcao'>{ valorAcao(name, quantity) }</td>
                 <td className='buttons'>
-                  <button className='btnCompraVenda btnCompra'> <Link to='/compraVenda' > C </Link></button>
-                  <button className='btnCompraVenda btnVenda'> <Link to='/compraVenda' > V </Link> </button>
+                <Link to='/compraVenda' ><button className='btnCompraVenda btnCompra'>  C </button></Link>
+                <Link to='/compraVenda' ><button className='btnCompraVenda btnVenda'>  V  </button></Link>
                 </td>
               </tr>
             ))

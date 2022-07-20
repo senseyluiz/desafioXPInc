@@ -2,19 +2,20 @@
   --background-qtde: #3A5A40;
   --background-acoes: #FCA311;
   --background-valor: #000;
-  --background-primary: #58815760;
+  --background-primary: #58815780;
   --background-button-compra: #0DCB13;
   --background-button-primary: #14213D;
   --background-button-secundary: #FCA311;
   --background-button-venda: #F39A08;  
 }
 
-.screenWidth {  
-  height: 100vh;  
+.screenWidth { 
+  background-color: var(--background-primary); 
+  min-height: 100vh;  
   margin: 0 auto;
   max-width: 800px;
-  min-width: 360px;
-  padding:  20px;
+  /* min-width: 360px; */
+  padding: 20px;
   width: 100%;
 }
 
@@ -55,6 +56,7 @@
 .btnCompraVenda {  
   border: none;
   border-radius: 5px; 
+  color: #FFFFFF;
   font-size: 16px;
   font-weight: bold;
   height: 23px;
@@ -83,11 +85,13 @@ button {
   cursor: pointer;
 }
 
-.btnVoltar {
+.btnVoltar, .btnConfirmar {
   background-color: var(--background-button-primary);
   border-radius: 5px;
   height: 30px;
   font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
   width: 120px;
   
 }

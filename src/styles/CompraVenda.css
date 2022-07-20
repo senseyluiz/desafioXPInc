@@ -1,7 +1,16 @@
-/* .CompraVenda {
-  background-color: var(--background-primary);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
+.CompraVenda {  
+  height: 100vh;  
+}
+
+td {
+  text-align: center;
+}
+
+.CompraVenda .btnVoltar {
+  margin-top: 150px;
+}
+
+.btnDepositoRetirada {  
+  margin-top: 100px;
+}
+

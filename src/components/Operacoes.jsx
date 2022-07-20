@@ -15,9 +15,9 @@ return (
       </thead>
 
       <tbody>
-        <td className='acoes'>AZUL4</td>
-        <td className='qtde'>100</td>
-        <td className='valor'>350,00</td>
+        <td className='nomeAcao'>AZUL4</td>
+        <td className='qtdeAcao'>100</td>
+        <td className='valorAcao'>350,00</td>
       </tbody>
       
     </table>
@@ -31,9 +31,7 @@ return (
          <button type="submit"className='btnVoltar '> <Link to="/listaAcoes">VOLTAR </Link></button>        
     </div>
 
-    <Link to="/meuSaldo"> <button type='submit' className='btnDepositoRetirada'> Depósito / Retirada </button> </Link>
-
-   
+    <Link to="/meuSaldo"> <button type='submit' className='title btnDepositoRetirada'> Depósito / Retirada </button> </Link>   
   </section>
 )
 

@@ -1,7 +1,8 @@
 .Login {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  
 }
 
 .Login img {
@@ -13,6 +14,7 @@
 .Login .Form {
   display: flex;
   flex-direction: column;
+  
 }
 
 .Login .Form input {

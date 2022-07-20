@@ -53,7 +53,7 @@ function DepositoRetirada (){
 
       <div className='buttons'>
          <button type="submit"className='btnVoltar'> <Link to="/listaAcoes">VOLTAR </Link></button>
-        <button type="submit" className='btnConfirmar'> CONFIRMAR </button>
+        {/* <button type="submit" className='btnConfirmar'> CONFIRMAR </button> */}
       </div>
     </section>
   )

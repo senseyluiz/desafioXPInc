@@ -4,7 +4,7 @@ import Operacoes from '../components/Operacoes';
 
 function CompraVenda () {
   return(
-    <main className="CompraVenda">      
+    <main className="CompraVenda screenWidth">      
       <Header />
       <Operacoes />
     </main>
