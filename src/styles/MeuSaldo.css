@@ -1,19 +1,5 @@
-/* .MeuSaldo {
-  padding: 10px 0;
-  background-color: var(--background-primary);
-  height: 100vh;
-  display: flex;  
-  flex-direction: column;  
-  align-items: center;
-}
-.DepositoRetirada {
- 
-  max-width: 400px;
-  min-width: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.MeuSaldo {
+  text-align: center;  
 }
 
 .saldo {
@@ -25,11 +11,6 @@
   align-items: center;
   padding: 0 10px;
   border-radius: 5px;  
-}
-
-.saldo span {
-  color: #FFF;
-  font-weight: bold;
 }
 
 .DepositoRetirada .inputValor {
@@ -45,50 +26,50 @@
   border: none;
 }
 
-.DepositoRetirada button{  
+/* .DepositoRetirada button{  
   border: none;
   border-radius: 5px;
   color: #FFF;
   width: 120px;
   font-weight: bold;
-}
+} */
 
-.btnDepositar {
+/* .btnDepositar {
   height: 38px;
   background-color: var(--background-button-compra);
   font-size: 20px;
   cursor: pointer;
-}
+} */
 
-.btnRetirada {
+/* .btnRetirada {
   height: 38px;
   background-color: var(--background-button-venda);
   font-size: 20px;
   cursor: pointer;
-}
+} */
 
-.btnVoltar {
+/* .btnVoltar {
   height: 30px;
   font-size: 16px;  
   background-color: var(--background-button-primary);
   cursor: pointer;
-}
+} */
 
-.btnConfirmar {
+/* .btnConfirmar {
   height: 30px;
   font-size: 16px;  
   background-color: var(--background-button-primary);
-}
+} */
 
-.DepositoRetirada .buttons {
+/* .DepositoRetirada .buttons {
   margin-top: 100px;
   display: flex;
   width: 100%;
   justify-content: space-between;
   
-}
+} */
 
 
 
 
- */
+

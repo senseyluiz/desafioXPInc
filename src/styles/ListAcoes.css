@@ -1,13 +1,12 @@
 
-table {
-  background-color: rgb(232, 142, 24);  
+table {    
   font-weight: bold;
   min-width: 360px;
   width: 100%;  
 }
 
 table tr {
-  /* background-color: blue;   */
+ 
   text-align: center;  
 }
 

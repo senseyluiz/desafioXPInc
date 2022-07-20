@@ -40,7 +40,7 @@ function DepositoRetirada (){
 
   return(
     <section className='DepositoRetirada'>
-      <div className='saldo'>
+      <div className='saldo title'>
         <span>Saldo: </span><span> R$ { userConected.saldo}</span>
       </div>
 

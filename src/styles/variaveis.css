@@ -9,27 +9,13 @@
   --background-button-venda: #F39A08;  
 }
 
-.screenWidth {
-  align-items: center;  
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+.screenWidth {  
+  height: 100vh;  
   margin: 0 auto;
   max-width: 800px;
   min-width: 360px;
-  padding: 10px 20px;
+  padding:  20px;
   width: 100%;
-  background-color: aqua;
-}
-
-.btnDadosLogin {
-  color: #FFFFFF;
-  background-color: var(--background-button-primary);
-  border-radius: 5px;
-  font-size: 24px;
-  height: 40px;
-  width: 230px;
 }
 
 .btnAcessar {
@@ -73,7 +59,7 @@
   font-size: 16px;
   font-weight: bold;
   height: 23px;
-  width: 35px;
+  width: 40px;
 }
 
 .btnVenda {
@@ -96,4 +82,13 @@ button:disabled {
 
 button {
   cursor: pointer;
+}
+
+.btnVoltar {
+  background-color: var(--background-button-primary);
+  border-radius: 5px;
+  height: 30px;
+  font-size: 16px;
+  width: 120px;
+  
 }

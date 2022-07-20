@@ -1,3 +1,9 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .Login img {
   margin-bottom: 50px;
   max-width: 340px;
@@ -16,8 +22,9 @@
   width: 230px;
   height: 40px;
   padding-left: 10px;  
-  font-size: 24px; 
+  font-size: 20px; 
   margin-bottom: 15px;
+  background-color: var(--background-button-primary);
 }
 
 .Form button {

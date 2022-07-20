@@ -43,8 +43,8 @@ function Form () {
   return(
     
     <form action="" method="post" className="Form">
-        <input type="text" placeholder="Email" name = "email" onChange={handleChange} className ="btnDadosLogin"/>
-        <input type="password" placeholder="Senha" name = "password" onChange={handleChange} className ="btnDadosLogin" />
+        <input type="text" placeholder="Email" name = "email" onChange={handleChange} />
+        <input type="password" placeholder="Senha" name = "password" onChange={handleChange} />
         <button type="submit" onClick={handleClick} className ="btnDadosLogin btnAcessar"> Acessar </button> 
     </form>
     
