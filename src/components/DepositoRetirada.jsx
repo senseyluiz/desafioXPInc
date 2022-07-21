@@ -26,6 +26,10 @@ function DepositoRetirada (){
   }
 
   const retirar = (valor) => {
+    const {saldo} = userConected
+    if(valor > saldo){
+      return alert("Saldo insuficiente para esta retirada.")
+    }
     Users.find((user) => user.email === dadosLogin.email).saldo += Number(valor);
     setUserConected((previstate) => ({
       ...previstate,
@@ -41,7 +45,7 @@ function DepositoRetirada (){
   return(
     <section className='DepositoRetirada'>
       <div className='saldo title'>
-        <span>Saldo: </span><span> R$ { userConected.saldo}</span>
+        <span>Saldo: </span><span> R$ { (userConected.saldo).toFixed(2)}</span>
       </div>
 
       <input type="text" onChange={handleClange} className='inputValor' placeholder='Informe  Valor'/>
