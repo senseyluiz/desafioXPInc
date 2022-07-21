@@ -32,6 +32,7 @@ function Form () {
         ...previstate,
         name: conected.name,
         email: conected.email,
+        minhasAcoes: conected.acoes,
         saldo: conected.saldo,
       }))
       

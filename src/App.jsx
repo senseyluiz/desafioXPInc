@@ -11,7 +11,8 @@ import MyContext from './components/MyContext';
 
 function App() {
   const [dadosLogin, setDadosLogin] = useState({email:"", password:""}) 
-  const [userConected, setUserConected] = useState({name:"", email: "", saldo: 0})
+  const [userConected, setUserConected] = useState({name:"", email: "", minhasAcoes: [], saldo: 0})
+  const [negociar, setNegociar] = useState({acao:"", qtde: 0})
   
 
   const contextValue = {
@@ -19,6 +20,8 @@ function App() {
     setDadosLogin,
     userConected,
     setUserConected,
+    negociar,
+    setNegociar
   }
   return (
     <main className="App">    

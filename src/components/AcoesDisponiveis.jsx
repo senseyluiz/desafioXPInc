@@ -1,8 +1,17 @@
 
 import { Link } from 'react-router-dom';
 import Acoes from '../data/Acoes';
+import Users from '../data/Users';
+import { useContext } from 'react';
+import MyContext from './MyContext';
 
-function AcoesDisponiveis () {  
+function AcoesDisponiveis () { 
+  const {dadosLogin} = useContext(MyContext)
+  const conected = Users.find((user) => user.email === dadosLogin.email);
+  const acoesCarteira = []
+  conected.acoes.forEach((acao) => {
+    acoesCarteira.push(acao.name)
+  })
   
   return(
     <section>
@@ -12,7 +21,7 @@ function AcoesDisponiveis () {
           <tr>
             <th>Açoes</th>
             <th>Qtde</th>
-            <th>Valor(R$)</th>
+            <th>Valor Unit (R$)</th>
             <th>Negociar</th>
           </tr>
         </thead>
@@ -21,14 +30,15 @@ function AcoesDisponiveis () {
 
           {
             Acoes.map(({name, valor, quantity}) => (
-              <tr key={name}>
+              !acoesCarteira.includes(name) &&
+              (<tr key={name}>
                 <td className='nomeAcao'>{ name }</td>
                 <td className='qtdeAcao'>{ quantity }</td>
                 <td className='valorAcao'>{ valor }</td>
                 <td className='buttons'> 
                 <Link to='/compraVenda' ><button className='btnCompraVenda btnCompra'>  C </button></Link> 
                   <button disabled={true} className='btnCompraVenda btnVenda'>  V </button> </td>
-              </tr>
+              </tr>)
             ))
           }
 
