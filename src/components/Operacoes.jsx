@@ -60,7 +60,7 @@ function Operacoes () {
   
 return (
   <section className='Operacoes'>
-    <div className="saldo">Saldo: R$ {saldo.toFixed(2)}</div>
+    <div className="saldo">  Saldo: <span> R$ {saldo.toFixed(2)}</span></div>
 
     <div className="title"> Comprar / Vender Ações </div>
 

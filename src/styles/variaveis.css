@@ -99,3 +99,19 @@ button {
 th {
   width: 25%;
 }
+
+.Error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: red;
+  font-size: 24px;
+  text-align: center;
+
+}
+
+.Error img {
+  width: 90%;
+  
+}
