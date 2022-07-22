@@ -171,4 +171,8 @@
   ![Tela de Erro](./src/img/readme/error.png)
 
   **Caso o usuário tente acessar uma rota que não existe, essa será a página de retorno**
-  **Essa página além da mensagem, existe um link que redireciona o usuário para a página de login**
+  **Essa página além da mensagem, existe um link que redireciona o usuário para a página de logingit a**
+
+  ****
+
+  
