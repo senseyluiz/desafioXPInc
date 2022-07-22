@@ -51,7 +51,7 @@ function Operacoes () {
 
   const vender = () => {  
     const temAcao = minhasAcoes.some(({name, quantity}) => name = negociar.acao && quantity >= ativo.qtdeAtivo)
-    console.log(ativo) 
+    let possuiQtdeAcao = false 
     if(!temAcao === true) {
       return alert("Você não possui essa quantidade de ação em sua carteira.")
     }
@@ -59,9 +59,23 @@ function Operacoes () {
       ...previstate,
       saldo: previstate.saldo + totalPagar,
       // minhasAcoes: [...previstate.minhasAcoes]
+      minhasAcoes: minhasAcoes.forEach((acao) => {
+        
+        if(acao.name === negociar.acao){
+          if(acao.quantity >= ativo.qtdeAtivo)
+          acao.quantity = Number(acao.quantity) - Number(ativo.qtdeAtivo)
+          possuiQtdeAcao = true
+        }
+      })
     }))
 
-    alert("Venda Realizada com Sucesso")
+    if(!possuiQtdeAcao){      
+      return alert("Você não possui Ações suficientes para vender")
+    }
+    else{
+      return alert("Venda Realizada com Sucesso")
+    }
+
 
   }
 
