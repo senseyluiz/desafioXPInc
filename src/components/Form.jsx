@@ -26,7 +26,11 @@ function Form () {
 
     if(isValidLogin){
 
-      const conected = Users.find((user) => user.email === dadosLogin.email);
+      const conected = Users.find((user) => user.email === dadosLogin.email && user.password === password);
+
+      if(!conected){
+        return alert("Usuário ou senha inválida")
+      }
       
       setUserConected((previstate) => ({
         ...previstate,
@@ -38,8 +42,7 @@ function Form () {
       
       
       history.push("/listaAcoes"); // Redireciona para página lista de Ações
-    }    
-
+    }
   }
   return(
     

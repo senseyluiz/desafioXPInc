@@ -6,12 +6,20 @@ import { useContext } from 'react';
 import MyContext from './MyContext';
 
 function AcoesDisponiveis () { 
-  const {dadosLogin} = useContext(MyContext)
+  const {dadosLogin, setNegociar} = useContext(MyContext)
   const conected = Users.find((user) => user.email === dadosLogin.email);
   const acoesCarteira = []
   conected.acoes.forEach((acao) => {
     acoesCarteira.push(acao.name)
   })
+
+  const handleClick = (name, quantity) => {
+    setNegociar((previstate) => ({
+      ...previstate,
+      acao: name,
+      qtde: quantity
+    }))
+  }
   
   return(
     <section>
@@ -36,7 +44,7 @@ function AcoesDisponiveis () {
                 <td className='qtdeAcao'>{ quantity }</td>
                 <td className='valorAcao'>{ valor }</td>
                 <td className='buttons'> 
-                <Link to='/compraVenda' ><button className='btnCompraVenda btnCompra'>  C </button></Link> 
+                <Link to='/compraVenda' ><button className='btnCompraVenda btnCompra' onClick={() => handleClick(name, quantity)}>  C </button></Link> 
                   <button disabled={true} className='btnCompraVenda btnVenda'>  V </button> </td>
               </tr>)
             ))

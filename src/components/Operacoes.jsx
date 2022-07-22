@@ -3,14 +3,16 @@ import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import MyContext from './MyContext';
 import Acoes from '../data/Acoes';
+import Users from '../data/Users';
 
 function Operacoes () {
 
-  const { negociar, userConected: {saldo}, setUserConected } = useContext(MyContext)
-  const valorAcao = Acoes.find((acao) => acao.name === negociar.acao).valor; 
+  const { negociar, userConected: {saldo, name}, setUserConected } = useContext(MyContext)
   const [ativo, setAtivo] = useState({name:"", qtdeAtivo: 0, valorAtivo: 0})
   const [totalPagar, setTotalPagar] = useState(0) 
   
+  const valorAcao = Acoes.find((acao) => acao.name === negociar.acao).valor; 
+  const minhasAcoes = Users.find((user) => user.name === name).acoes 
 
   const handleChange = ({target}) => {
     const {name, value} = target
@@ -37,15 +39,17 @@ function Operacoes () {
 
   }
 
-  const vender = () => {    
-
+  const vender = () => {  
+    const temAcao = minhasAcoes.some(({name}) => name = negociar.acao)
+    console.log(!temAcao) 
+    if(temAcao === true) {
+      return alert("Você não possui essa ação em sua carteira.")
+    }
     setUserConected((previstate) => ({
       ...previstate,
       saldo: previstate.saldo + totalPagar,
       minhasAcoes: [...previstate.minhasAcoes]
     }))
-
-
 
     alert("Venda Realizada com Sucesso")
 

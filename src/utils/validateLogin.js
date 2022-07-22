@@ -3,7 +3,7 @@ import validatePassword from "./validatePassword";
 
 const validateLogin = (email, password) => {
   const isValidEmail = validateEmail(email);
-    const isvalidPassword = validatePassword(password)
+  const isvalidPassword = validatePassword(password)
 
   if(!isValidEmail){
     
