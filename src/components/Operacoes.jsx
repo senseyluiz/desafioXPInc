@@ -58,7 +58,7 @@ function Operacoes () {
     setUserConected((previstate) => ({
       ...previstate,
       saldo: previstate.saldo + totalPagar,
-      minhasAcoes: [...previstate.minhasAcoes]
+      // minhasAcoes: [...previstate.minhasAcoes]
     }))
 
     alert("Venda Realizada com Sucesso")
