@@ -100,9 +100,11 @@
 
 **Ao lado dos dados de cada ação, existe dois botões(C e V) para negociar a ação. Nas ações disponiveis que o usuário ainda não possui em carteira, o botão de vemda não está ativo. Ao clicar em um dos botões, o usuário é direcionado para a página em que ele possa negociar o ativo.**
 
-**No final da tela possui um botão "Depósito/Retirada" que direciona o usuário para a tela onde o usuário possa fazer tais operações**
+**No final da tela possui um botão ```"Depósito/Retirada"``` que direciona o usuário para a tela onde o usuário possa fazer tais operações de depósito ou retirada**
 
 ****
+
+## Tela de Compra e Venda de Ações
 
 ![Tela de Compra e venda de Ações](./src/img/readme/compraVenda.png)
 
@@ -115,6 +117,7 @@
 * Se o usuário deseja comprar:
   * Será verificado se o saldo existente em conta é igual ou superior ao valor a ser pago
     * Caso o saldo seja superior, o total a ser pago será subtraido do valor do saldo e a compra é realizada, retornando uma mensagem "Compra realizada com sucesso"
+
     ![Mensagem Compra realizada](./src/img/readme/compraSucesso.png)
 
 
@@ -128,3 +131,44 @@
     *  Caso o usuário possua no mínimo a quantidade a ser vendida, a venda será realizada com sucesso e adicionado o valor em seu saldo. Retorna a mensagem "Venda realizada com Sucesso"
 
     ![Mensagem Venda Realizada](./src/img/readme/vendaSucesso.png)
+
+  * Caso o usuário não possua a quantidade de ativos em sua carteira será retornado a mensagem:
+
+
+  ![Mensagem Ações Insuficiente](./src/img/readme/qtdeInsuficiente.png)
+
+
+  **No final da tela possui um botão ```"Depósito/Retirada"``` que direciona o usuário para a tela onde o usuário possa fazer tais operações de depósito ou retirada**
+
+  ****
+
+## Tela de Deósito e Retirada
+
+  ![Tela de Depósito e Retirada](./src/img/readme/depositoRetirada.png)
+
+  **Nessa tela o usuário pode efetuar depósito e retirada de seu saldo.**
+  O Usuário digita o valor que deseja e clique em um dos botões:
+
+  * **Depósito:**
+    * Será adicionado em seu saldo o valor desejado em seu saldo e retornando a mensagem:
+
+     ![Mensagem Deposito com Sucesso](./src/img/readme/depositoSucesso.png)
+
+  * **Retirada**
+    * Será verificado se o usuário possui saldo igual ou superior ao valor desejado para retirada.
+      * Caso possua esse valor, será subtraido de seu saldo o valor e retornado a mensagem:
+
+      ![Mensagem Retirada com Sucesso](./src/img/readme/retiradaSucesso.png)
+
+      * Caso não possua esse valor, será impedido de efetuar a retirada e retorna a mensagem:
+
+      ![Mensagem Retirada com Sucesso](./src/img/readme/saldoInsuficiente.png)
+
+  ****
+
+  ## Tela de Erro
+
+  ![Tela de Erro](./src/img/readme/error.png)
+
+  **Caso o usuário tente acessar uma rota que não existe, essa será a página de retorno**
+  **Essa página além da mensagem, existe um link que redireciona o usuário para a página de login**
