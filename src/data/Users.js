@@ -8,9 +8,9 @@ const Users = [
   },
 
   {
-    name: "Carlos Henrique",
-    email: "carlosTeste@gmail.com",
-    password: "carlos1234",
+    name: "Usuario Teste",
+    email: "usuarioteste@gmail.com",
+    password: "teste1234",
     acoes: [{name: "PETR4", quantity: 100}, {name: "AZUL4", quantity: 500} ],
     saldo: 28000.00
   }

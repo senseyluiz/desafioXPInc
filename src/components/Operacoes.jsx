@@ -8,6 +8,8 @@ import Users from '../data/Users';
 function Operacoes () {
 
   const { negociar, userConected: {saldo, name}, setUserConected } = useContext(MyContext)
+  
+  // Dados devolvidos após clicar no botão de compra uma ação específica
   const [ativo, setAtivo] = useState({name:"", qtdeAtivo: 0, valorAtivo: 0})
   const [totalPagar, setTotalPagar] = useState(0) 
   
@@ -22,7 +24,6 @@ function Operacoes () {
     }))
   }
 
-
   const comprar = () => {
 
     if(totalPagar > saldo) {
@@ -32,18 +33,27 @@ function Operacoes () {
     setUserConected((previstate) => ({
       ...previstate,
       saldo: previstate.saldo - totalPagar,
-      
+
+      minhasAcoes: minhasAcoes.forEach((acao) => {
+        
+        if(acao.name === negociar.acao){
+          acao.quantity = Number(acao.quantity) + Number(ativo.qtdeAtivo)
+        }
+      })
+           
     }))
+
+    
 
     alert("Compra Realizada com Sucesso")
 
   }
 
   const vender = () => {  
-    const temAcao = minhasAcoes.some(({name}) => name = negociar.acao)
-    console.log(!temAcao) 
-    if(temAcao === true) {
-      return alert("Você não possui essa ação em sua carteira.")
+    const temAcao = minhasAcoes.some(({name, quantity}) => name = negociar.acao && quantity >= ativo.qtdeAtivo)
+    console.log(ativo) 
+    if(!temAcao === true) {
+      return alert("Você não possui essa quantidade de ação em sua carteira.")
     }
     setUserConected((previstate) => ({
       ...previstate,

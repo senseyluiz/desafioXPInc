@@ -10,7 +10,7 @@ function MinhasAcoes () {
   const { userConected, setNegociar} = useContext(MyContext)
   const {name} = userConected
   const minhasAcoes = Users.find((user) => user.name === name).acoes  
-
+  
   const valorAcao = (name, qtde) => {
     const acao = Acoes.find((acao) => acao.name === name).valor;
     return (acao * qtde).toFixed(2)
@@ -47,7 +47,7 @@ function MinhasAcoes () {
                 <td className='valorAcao'>{ valorAcao(name, quantity) }</td>
                 <td className='buttons'>
                 <Link to='/compraVenda' ><button className='btnCompraVenda btnCompra' onClick={() => handleClick(name, quantity)}>  C </button></Link>
-                <Link to='/compraVenda' ><button className='btnCompraVenda btnVenda'>  V  </button></Link>
+                <Link to='/compraVenda' ><button className='btnCompraVenda btnVenda' onClick={() => handleClick(name, quantity)}>  V  </button></Link>
                 </td>
               </tr>
             ))
