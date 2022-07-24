@@ -43,9 +43,11 @@ function Operacoes () {
            
     }))
 
-    
+    if(ativo.qtdeAtivo > 0){
+      return alert("Compra Realizada com Sucesso")
+    }
 
-    alert("Compra Realizada com Sucesso")
+   
 
   }
 
@@ -57,7 +59,7 @@ function Operacoes () {
     }
     setUserConected((previstate) => ({
       ...previstate,
-      saldo: previstate.saldo + totalPagar,
+      
       // minhasAcoes: [...previstate.minhasAcoes]
       minhasAcoes: minhasAcoes.forEach((acao) => {
         
@@ -66,7 +68,8 @@ function Operacoes () {
           acao.quantity = Number(acao.quantity) - Number(ativo.qtdeAtivo)
           possuiQtdeAcao = true
         }
-      })
+      }),
+      saldo: possuiQtdeAcao ? previstate.saldo + totalPagar : null,
     }))
 
     if(!possuiQtdeAcao){      
