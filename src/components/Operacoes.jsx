@@ -43,11 +43,13 @@ function Operacoes () {
            
     }))
 
-    if(ativo.qtdeAtivo > 0){
+    if(ativo.qtdeAtivo > 0 ){
       return alert("Compra Realizada com Sucesso")
     }
-
-   
+    
+    if(typeof ativo.qtdeAtivo !== Number){
+      return alert("O campo quantidade precisa ser um numero maior que 0")
+    }
 
   }
 
